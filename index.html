@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tin tức mới nhất trong nước và quốc tế.">
+  <title>TIN TỨC | Trang chủ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="index.html" aria-label="Trang chủ">
+        <span class="logo-mark">T</span>
+        <span>TIN TỨC</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        type="button" aria-label="Mở danh mục" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="main-nav" id="categoryMenu" aria-label="Danh mục tin tức">
+        <a href="index.html">Trang chủ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <div class="page-heading">
+      <div>
+        <p class="eyebrow">CẬP NHẬT LIÊN TỤC</p>
+        <h1 id="pageTitle">Tin tức mới nhất</h1>
+      </div>
+      <p id="postCount" class="post-count">Đang tải bài viết...</p>
+    </div>
+
+    <section id="featuredSection" class="featured-section">
+      <div id="featuredPosts" class="featured-grid">
+        <p class="loading-message">Đang tải tin tức...</p>
+      </div>
+    </section>
+
+    <section class="latest-section">
+      <div class="section-heading">
+        <h2 id="listHeading">Tin mới nhất</h2>
+        <span class="section-line"></span>
+      </div>
+
+      <div id="postList" class="post-list">
+        <p class="loading-message">Đang tải danh sách bài viết...</p>
+      </div>
+
+      <p id="emptyMessage" class="empty-message" hidden>
+        Chưa có bài viết trong chuyên mục này.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="site-logo footer-logo" href="index.html">
+          <span class="logo-mark">T</span>
+          <span>TIN TỨC</span>
+        </a>
+        <p>
+          Trang tin tức tổng hợp, cập nhật các thông tin trong nước
+          và quốc tế theo từng chuyên mục.
+        </p>
+      </div>
+
+      <div>
+        <h3>Liên kết nhanh</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="crawler.html">Thu thập bài viết</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Chuyên mục</h3>
+        <ul id="footerCategories" class="footer-links">
+          <li><a href="index.html">Tin tức mới nhất</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Liên hệ</h3>
+        <p>Email: contact@example.com</p>
+        <p>Địa chỉ: Việt Nam</p>
+        <div class="social-links" aria-label="Mạng xã hội">
+          <a href="https://www.facebook.com/" target="_blank"
+            rel="noopener noreferrer" aria-label="Facebook">f</a>
+          <a href="https://www.youtube.com/" target="_blank"
+            rel="noopener noreferrer" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="currentYear"></span> TIN TỨC. Bản quyền thuộc về trang web.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
