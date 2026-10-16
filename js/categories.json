@@ -1,0 +1,87 @@
+
+{
+  "menu": [
+    {
+      "id": "home",
+      "title": "Home",
+      "url": "https://dantri.com.vn/",
+      "type": "home"
+    },
+    {
+      "id": "dt360",
+      "title": "Dân trí 360",
+      "url": "https://dantri.com.vn/dt360.htm",
+      "type": "external"
+    },
+    {
+      "id": "latest",
+      "title": "Mới nhất",
+      "url": "https://dantri.com.vn/tin-moi-nhat.htm",
+      "type": "category"
+    },
+    {
+      "id": "the-gioi",
+      "title": "Thế giới",
+      "url": "https://dantri.com.vn/the-gioi.htm",
+      "type": "category",
+      "children": [
+        {
+          "id": "quan-su",
+          "title": "Quân sự",
+          "url": "https://dantri.com.vn/the-gioi/quan-su.htm",
+          "type": "category"
+        },
+        {
+          "id": "phan-tich",
+          "title": "Phân tích - Bình luận",
+          "url": "https://dantri.com.vn/the-gioi/phan-tich-binh-luan.htm",
+          "type": "category"
+        },
+        {
+          "id": "the-gioi-do-day",
+          "title": "Thế giới đó đây",
+          "url": "https://dantri.com.vn/the-gioi/the-gioi-do-day.htm",
+          "type": "category"
+        },
+        {
+          "id": "kieu-bao",
+          "title": "Kiều bào",
+          "url": "https://dantri.com.vn/the-gioi/kieu-bao.htm",
+          "type": "category"
+        }
+      ]
+    },
+    {
+      "id": "thoi-su",
+      "title": "Thời sự",
+      "url": "https://dantri.com.vn/thoi-su.htm",
+      "type": "category",
+      "children": [
+        {
+          "id": "chinh-tri",
+          "title": "Chính trị",
+          "url": "https://dantri.com.vn/thoi-su/chinh-tri.htm",
+          "type": "category"
+        },
+        {
+          "id": "giao-thong",
+          "title": "Giao thông",
+          "url": "https://dantri.com.vn/thoi-su/giao-thong.htm",
+          "type": "category"
+        },
+        {
+          "id": "moi-truong",
+          "title": "Môi trường",
+          "url": "https://dantri.com.vn/thoi-su/moi-truong.htm",
+          "type": "category"
+        },
+        {
+          "id": "nong-tren-mang",
+          "title": "Nóng trên mạng",
+          "url": "https://dantri.com.vn/thoi-su/nong-tren-mang.htm",
+          "type": "category"
+        }
+      ]
+    }
+  ]
+}
