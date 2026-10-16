@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thu thập bài viết | TIN TỨC</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .crawler-container {
+      max-width: 900px;
+      margin: 35px auto 60px;
+      width: 92%;
+    }
+
+    .crawler-form {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .crawler-form input {
+      flex: 1;
+      min-width: 0;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+
+    .crawler-form button,
+    .crawler-actions button {
+      border: 0;
+      border-radius: 5px;
+      padding: 12px 18px;
+      cursor: pointer;
+      background: #b5121b;
+      color: white;
+      font-weight: bold;
+    }
+
+    .crawler-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    .crawler-actions .secondary {
+      background: #444;
+    }
+
+    .crawler-status {
+      padding: 12px;
+      background: #f4f5f7;
+      border-radius: 5px;
+      overflow-wrap: anywhere;
+    }
+
+    .crawler-preview {
+      margin-top: 20px;
+    }
+
+    .crawler-preview input,
+    .crawler-preview textarea,
+    .crawler-preview select {
+      width: 100%;
+      padding: 11px;
+      margin: 5px 0 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font: inherit;
+    }
+
+    .crawler-preview textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .crawler-preview label {
+      font-weight: bold;
+    }
+
+    .crawler-json {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      background: #202124;
+      color: #eee;
+      padding: 16px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    @media (max-width: 600px) {
+      .crawler-form {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="index.html">
+        <span class="logo-mark">T</span>
+        <span>TIN TỨC</span>
+      </a>
+      <a href="index.html">← Về trang chủ</a>
+    </div>
+  </header>
+
+  <main class="crawler-container">
+    <p class="eyebrow">CÔNG CỤ THU THẬP DỮ LIỆU</p>
+    <h1>Thu thập bài viết Dân trí</h1>
+    <p>
+      Nhập URL bài báo công khai trên Dân trí để thử lấy thông tin
+      bài viết. Kiểm tra dữ liệu trước khi lưu.
+    </p>
+
+    <form id="crawlerForm" class="crawler-form">
+      <input
+        id="articleUrl"
+        type="url"
+        placeholder="https://dantri.com.vn/..."
+        required
+      >
+      <button id="crawlButton" type="submit">Thu thập dữ liệu</button>
+    </form>
+
+    <p id="crawlerStatus" class="crawler-status" role="status">
+      Chưa có dữ liệu. Hãy nhập URL bài viết.
+    </p>
+
+    <section id="previewSection" class="crawler-preview" hidden>
+      <h2>Kiểm tra dữ liệu bài viết</h2>
+
+      <form id="articleForm">
+        <label for="postTitle">Tiêu đề</label>
+        <input id="postTitle" required>
+
+        <label for="postSlug">Slug</label>
+        <input id="postSlug" required>
+
+        <label for="postExcerpt">Tóm tắt</label>
+        <textarea id="postExcerpt"></textarea>
+
+        <label for="postContent">Nội dung</label>
+        <textarea id="postContent" required></textarea>
+
+        <label for="postAuthor">Tác giả</label>
+        <input id="postAuthor">
+
+        <label for="postCategory">Chuyên mục</label>
+        <select id="postCategory" required>
+          <option value="">Đang tải chuyên mục...</option>
+        </select>
+
+        <label for="postDate">Ngày đăng</label>
+        <input id="postDate" placeholder="YYYY-MM-DD HH:mm" required>
+
+        <label for="postImage">URL ảnh đại diện (nếu có)</label>
+        <input id="postImage" type="url">
+
+        <label for="postSource">Nguồn</label>
+        <input id="postSource" value="dantri.com.vn" required>
+
+        <label for="postOriginalUrl">URL bài viết gốc</label>
+        <input id="postOriginalUrl" type="url" required>
+
+        <div class="crawler-actions">
+          <button type="submit">Lưu bài vào website</button>
+          <button type="button" id="showJsonButton" class="secondary">
+            Xem JSON
+          </button>
+        </div>
+      </form>
+
+      <section id="jsonSection" hidden>
+        <h3>Dữ liệu JSON</h3>
+        <pre id="jsonOutput" class="crawler-json"></pre>
+      </section>
+    </section>
+  </main>
+
+  <script src="js/crawler.js"></script>
+</body>
+</html>
