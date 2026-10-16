@@ -488,3 +488,14 @@ button {
     font-size: 16px;
   }
 }
+
+.image-placeholder {
+  min-height: 100px;
+  background: #f0f1f3;
+  border-radius: 5px;
+}
+
+.featured-section[hidden],
+#emptyMessage[hidden] {
+  display: none;
+}
